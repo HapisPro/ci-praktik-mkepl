@@ -15,7 +15,22 @@ public class Driver {
 		counter.decrement();
 		
 		System.out.println("Hasil Perhitungan:" + counter.getCount());
+
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
 		
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
+
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
+
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
+		
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
+		
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
+
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
+		
+		System.out.println("Hasil Perhitungan:" + counter.getCount());
 	}
 
 }
