@@ -30,7 +30,8 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         server-id: github
-        settings-path: ${{ github.workspace }}
+        server-username: GITHUB_ACTOR      
+        server-password: GITHUB_TOKEN       
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
@@ -44,6 +45,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=hapispro -Dsonar.projectKey=HapisPro_ci-praktik-mkepl
     - name: "publish to GitHub Packages Apache Maven"
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn deploy
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
